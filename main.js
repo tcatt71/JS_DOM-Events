@@ -4,6 +4,13 @@
 // Select Node #2 and change the text to: "I used the getElementByClassName("node2") method to access this" */
 // Select ALL the h3 tags and change the text to: "I used the getElementByTagName("h3") method to access all of these" */
 
+document.getElementById('node1').innerHTML = `I used the getElementById("node1") method to access this`;
+document.getElementsByClassName('node2')[0].innerHTML = `I used the getElementByClassName("node2") method to access this`;
+let h3Collection = document.getElementsByTagName('h3');
+for (let i = 0; i < h3Collection.length; i++) {
+  h3Collection[i].innerHTML = `I used the getElementByTagName("h3") method to access all of these`;
+}
+
 /*----------- Exercise #2: CREATING/APPENDING/INSERTING ELEMENTS/OBJECTS -----------*/
 
 // TODO: Create a paragraph element using this element.createElement() and put this text inside "This node was created using the createElement() method"

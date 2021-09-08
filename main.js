@@ -37,6 +37,15 @@ parentElement.insertBefore(newAnchorTag, newParagraph);
 // TODO: Replace the "Child Node" with a new <a> element that reads "New Child Node"
 // TODO: Remove the "New Child Node"
 
+let parentNode = document.getElementById('exercise3');
+let childNode = document.getElementById('N1');
+let secondAnchorTag = document.createElement('a');
+
+secondAnchorTag.textContent = 'New Child Node';
+
+parentNode.replaceChild(secondAnchorTag, childNode);
+parentNode.removeChild(secondAnchorTag);
+
 /*----------- Exercise #4: ANIMATIONS ----------- */
 
 // TODO: Write your JavaScript here to make the red box go from left to right

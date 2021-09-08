@@ -41,7 +41,7 @@ body {
 }
 
 /*--------------- EXERCISE 3 STYLES ---------------- */
-.exercise3 {
+#exercise3 {
   text-align: center;
   margin: 5px;
   border-radius: 25px;

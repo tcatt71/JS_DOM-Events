@@ -1,3 +1,5 @@
+'use strict'
+
 /*----------- Exercise #1: SELECTING/MANIPULATING ELEMENTS -----------*/
 
 // Select Node #1 and change the text to: "I used the getElementById("node1") method to access this"
@@ -7,8 +9,9 @@
 document.getElementById('node1').innerHTML = `I used the getElementById("node1") method to access this`;
 document.getElementsByClassName('node2')[0].innerHTML = `I used the getElementByClassName("node2") method to access this`;
 let h3Collection = document.getElementsByTagName('h3');
-for (let i = 0; i < h3Collection.length; i++) {
-  h3Collection[i].innerHTML = `I used the getElementByTagName("h3") method to access all of these`;
+
+for (const h3 of h3Collection) {
+  h3.textContent = 'I used the getElementByTagName("h3") method to access all of these';
 }
 
 /*----------- Exercise #2: CREATING/APPENDING/INSERTING ELEMENTS/OBJECTS -----------*/
@@ -16,18 +19,27 @@ for (let i = 0; i < h3Collection.length; i++) {
 // TODO: Create a paragraph element using this element.createElement() and put this text inside "This node was created using the createElement() method"
 // TODO: Append the created node to the parent node using the element.appendChild() method
 
-// TODO: Create a <a> element using this element.createElement() and put this text inside "I am a <p> tag"
+// TODO: Create a <a> element using this element.createElement() and put this text inside "I am a <a> tag"
 // TODO: Insert the created <a> in the parent but before the <p> you just created using the element.insertBefore() method
 // BONUS: Add a link href to the <a>
 
+let newParagraph = document.createElement('p');
+newParagraph.innerHTML = 'This node was created using the createElement() method';
+let parentElement = document.querySelector('#parent');
+parentElement.appendChild(newParagraph);
+
+let newAnchorTag = document.createElement('a');
+newAnchorTag.innerHTML = 'I am a <a> tag';
+parentElement.insertBefore(newAnchorTag, newParagraph);
+
 /*----------- Exercise #3: REMOVING/REPLACING ELEMENTS/OBJECTS -----------*/
 
-// TODO: Replace the "Child Node" with a new <p> element that reads "New Child Node"
+// TODO: Replace the "Child Node" with a new <a> element that reads "New Child Node"
 // TODO: Remove the "New Child Node"
 
 /*----------- Exercise #4: ANIMATIONS ----------- */
 
-// TODO: Write your JavaScript here to make the red box go from right to left
+// TODO: Write your JavaScript here to make the red box go from left to right
 // BONUS - Make the red box go all the way around the perimeter of the green box */
 
 /*----------- Exercise #5: DOM EVENTS --------------*/

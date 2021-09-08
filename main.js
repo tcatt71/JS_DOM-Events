@@ -29,7 +29,7 @@ let parentElement = document.querySelector('#parent');
 parentElement.appendChild(newParagraph);
 
 let newAnchorTag = document.createElement('a');
-newAnchorTag.innerHTML = 'I am a <a> tag';
+newAnchorTag.innerHTML = '<a href="#">I am a tag</a>';
 parentElement.insertBefore(newAnchorTag, newParagraph);
 
 /*----------- Exercise #3: REMOVING/REPLACING ELEMENTS/OBJECTS -----------*/

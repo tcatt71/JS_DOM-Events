@@ -68,3 +68,17 @@ let timer = setInterval(move, 50);
 // TODO: write a function called "show" which creates a new div with an alerting message to the user with this message -> "Clicking the button triggers the onclick event, which calls the JS function show()... which alerts the user"
 // This div should be a 'modal' that covers the main content on the screen
 // BONUS: The modal popup should be able to be closed. Refactor for this functionality
+
+function show() {
+  let bodyElement = document.querySelector('body');
+  let modal = document.createElement('div');
+  modal.textContent = 'Clicking the button triggers the onclick event, which calls the JS function show()... which alerts the user';
+  modal.style.width = '200px';
+  modal.style.zIndex = 10;
+  modal.style.position = 'fixed';
+  modal.style.top = '50vh';
+  modal.style.left = '50vw';
+  bodyElement.prepend(modal);
+}
+
+

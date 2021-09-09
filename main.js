@@ -51,6 +51,18 @@ parentNode.removeChild(secondAnchorTag);
 // TODO: Write your JavaScript here to make the red box go from left to right
 // BONUS - Make the red box go all the way around the perimeter of the green box */
 
+let box = document.getElementById('box');
+let boxPosition = 0;
+
+function move() {
+  if (boxPosition <= 150) {
+    boxPosition += 1;
+    box.style.left = boxPosition + 'px';
+  }
+}
+
+let timer = setInterval(move, 50);
+
 /*----------- Exercise #5: DOM EVENTS --------------*/
 
 // TODO: write a function called "show" which creates a new div with an alerting message to the user with this message -> "Clicking the button triggers the onclick event, which calls the JS function show()... which alerts the user"
